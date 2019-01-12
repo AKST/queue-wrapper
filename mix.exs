@@ -4,7 +4,7 @@ defmodule QueueWrapper.MixProject do
   def project do
     [
       app: :queue_wrapper,
-      name: "QueueWrapper",
+      name: "queue_wrapper",
       package: package(),
       description: description(),
       version: "1.0.0",
@@ -33,7 +33,7 @@ defmodule QueueWrapper.MixProject do
 
   defp package() do
     [
-      name: "akst-queue",
+      name: "queue_wrapper",
       files: ~w(
         lib mix.exs README.md CONTRIBUTING.md LICENSE
         CHANGELOG.md test
