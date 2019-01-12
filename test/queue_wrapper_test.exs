@@ -11,8 +11,10 @@ defmodule QueueWrapperTest do
     end
 
     test "different layout" do
-      a = Queue.in_rear(:a, Queue.new()) # {[], [:a]}
-      b = Queue.in_front(:a, Queue.new()) # {[:a], []}
+      # {[], [:a]}
+      a = Queue.in_rear(:a, Queue.new())
+      # {[:a], []}
+      b = Queue.in_front(:a, Queue.new())
       assert Queue.equal(a, b)
     end
   end

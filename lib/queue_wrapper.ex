@@ -1,5 +1,5 @@
 defmodule QueueWrapper do
-  @type t() :: :queue.queue
+  @type t() :: :queue.queue()
 
   @moduledoc """
   Elixir bindings to the erlang queue library with
@@ -53,7 +53,6 @@ defmodule QueueWrapper do
   defdelegate snoc(queue, item), to: :queue
   defdelegate tail(queue), to: :queue
 
-
   def replace_at(items, index, value) do
     {left, right} = :queue.split(index, items)
     right = :queue.drop(right)
@@ -91,7 +90,6 @@ defmodule QueueWrapper do
   def equal(left, right) do
     equal(left, right, fn a, b -> a == b end)
   end
-
 
   def equal(left, right, eq) do
     left_len = :queue.len(left)
